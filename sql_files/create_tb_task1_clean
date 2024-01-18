@@ -1,0 +1,15 @@
+CREATE TABLE tb_task1_clean as 
+SELECT    DATE(substr(time,7,4)||'-'||substr(time,4,2)||'-'||substr(time,1,2)) as date_ref
+        , cat_level_0	
+        , cat_level_1	
+        , cat_level_2	
+        , distinct_sku_listed
+        , distinct_sku_sold
+        , qty_items_sold	
+        , price_value_EUR_cents
+        , discount_value_EUR_cents
+        , cogs_value_EUR_cents
+        , qty_items_wasted
+
+
+FROM task1_raw;
